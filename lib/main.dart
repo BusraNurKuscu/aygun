@@ -4,13 +4,12 @@ import 'login_screen2.dart';
 
 void main() => runApp(new MyApp());
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Login Screen 1',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -39,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Center(
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 50.0,
             color: Colors.white,
           ),
