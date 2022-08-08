@@ -428,10 +428,8 @@ class _LoginScreen2State extends State<LoginScreen2>
   }
 
   Widget SignupPage() {
-
     return SingleChildScrollView(
-      child: new Container(
-        height: MediaQuery.of(context).size.height,
+      child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
           image: DecorationImage(
@@ -855,6 +853,13 @@ class _LoginScreen2State extends State<LoginScreen2>
 
   @override
   Widget build(BuildContext context) {
+    return PageView(
+      controller: _controller,
+      physics: const AlwaysScrollableScrollPhysics(),
+      children: <Widget>[LoginPage(), HomePage(), SignupPage()],
+      scrollDirection: Axis.horizontal,
+    );
+
     return Container(
         height: MediaQuery.of(context).size.height,
 //      child: new GestureDetector(
